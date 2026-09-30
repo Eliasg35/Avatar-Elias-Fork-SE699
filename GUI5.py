@@ -7,6 +7,9 @@ from dotenv import load_dotenv
 # Load Neurosity credentials from the bundled env file before anything reads os.environ.
 load_dotenv(Path(__file__).resolve().parent / ".env.txt")
 
+import pandas as pd
+import matplotlib.pyplot as plt
+
 from PySide6.QtWidgets import QApplication,QFileDialog, QMessageBox
 from PySide6.QtQml import QQmlApplicationEngine
 from PySide6.QtCore import QObject, Signal, Slot, Property, QProcess, QUrl, QTimer
@@ -15,7 +18,6 @@ from djitellopy import Tello
 import random
 import threading
 import re
-import pandas as pd
 import torch
 import time
 from collections import defaultdict
